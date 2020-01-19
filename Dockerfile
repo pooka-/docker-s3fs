@@ -20,8 +20,7 @@ RUN curl -sSL https://github.com/s3fs-fuse/s3fs-fuse/archive/v1.85.tar.gz | tar 
   && make install
 
 ENV MOUNT_DIR=/mnt/s3 \
-    REGION=ap-northeast-1 \
-    BUCKET=my-bucket
+    REGION=ap-northeast-1
 
 ENTRYPOINT ["sh"]
 CMD [ \
@@ -40,5 +39,5 @@ CMD [ \
 
 LABEL com.aznyan.docker.image.name=s3fs
 LABEL com.aznyan.docker.image.arch=amd64
-LABEL com.aznyan.docker.image.version=1.0.0
+LABEL com.aznyan.docker.image.version=1.0.1
 LABEL com.aznyan.docker.image.app.version=v1.85
