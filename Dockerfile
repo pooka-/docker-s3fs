@@ -33,6 +33,7 @@ CMD [ \
       -o use_path_request_style \
       -o endpoint=${REGION} \
       -o passwd_file=/root/.passwd-s3fs \
+      -o url=https://s3-${REGION}.amazonaws.com \
       ${BUCKET} \
       ${MOUNT_DIR}" \
 ]
